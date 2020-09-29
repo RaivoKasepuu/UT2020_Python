@@ -21,12 +21,11 @@ küsib kasutajalt ühe täisarvu;
 arvutab while-tsükli abil, mitu nisutera sellise järjekorranumbriga ruudu eest leiutaja küsis;
 tulemus väljastatakse ekraanile pärast tsüklit.
 """
-print("Sisestage täisarv: ")
-base = int(input())
+
+base = int(input("Sisestage täisarv: "))
 astendaja = 1
 nisuteri = 1
 while astendaja < base:
     nisuteri *= 2
     astendaja += 1
-
 print("Nisuteri " + str(base) + ". ruudu eest: " + str(nisuteri))

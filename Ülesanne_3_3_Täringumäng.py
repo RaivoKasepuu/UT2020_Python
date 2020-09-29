@@ -14,8 +14,7 @@ väljastab iga arvu eraldi reale.
 Vihje: kui kasutada tsüklit, mis teeb kasutaja sisestatud arvu samme, siis igal sammul tuleb genereerida üks juhuslik arv ja see väljastada.
 """
 from random import randint
-print("Täringute arv: ")
-diceCount = int(input())
+diceCount = int(input("Täringute arv: "))
 while diceCount > 0:
     print(randint(1, 6))
     diceCount -= 1

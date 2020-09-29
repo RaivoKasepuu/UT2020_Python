@@ -16,10 +16,10 @@ väljastab kingitavate lillede koguarvu.
 Näiteks, kui kasutaja sisestas 4, siis paaritute arvude summa on 16, sest 1 + 3 + 5 + 7 = 16. Kui kasutaja sisestas 7,
 siis on summaks 49, sest 1 + 3 + 5 + 7 + 9 + 11 + 13 = 49.
 """
-print("Sisesta ostjate arv: ")
-ostjateArv = int(input())
+
+ostjateArv = int(input("Sisesta ostjate arv: "))
 lilledeKoguarv = 0
 while ostjateArv > 0:
-    lilledeKoguarv +=ostjateArv*2 - 1
+    lilledeKoguarv += ostjateArv * 2 - 1
     ostjateArv -= 1
 print("Lillede koguarv on " + str(lilledeKoguarv))

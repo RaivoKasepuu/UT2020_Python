@@ -19,8 +19,8 @@ arvuni, mis pole suurem kui klientide arv.
 Näiteks, kui kasutaja sisestas 7, siis paaritute arvude summa on 16, sest 1 + 3 + 5 + 7 = 16. Kui kasutaja sisestas 8,
 siis on summaks samuti 16, sest 1 + 3 + 5 + 7 = 16.
 """
-print("Sisesta ostjate arv")
-ostjateArv = int(input())
+
+ostjateArv = int(input("Sisesta ostjate arv"))
 lilliKokku = 0
 while ostjateArv > 0:
     if ostjateArv % 2 != 0:

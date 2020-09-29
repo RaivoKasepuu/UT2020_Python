@@ -14,8 +14,7 @@ iga viske kohta peab väljastama ühe rea ja see rida peab sisaldama sõna tabas
 arvutab kokku tabanud visete arvu ja see väljastab selle kõige viimasena.
 """
 from random import randint
-print("Sisestage visketabavuse protsent: ")
-visketabavusProtsent = int(input())
+visketabavusProtsent = int(input("Sisestage visketabavuse protsent: "))
 viskeid = 1000
 vise = 1
 tabas = 0

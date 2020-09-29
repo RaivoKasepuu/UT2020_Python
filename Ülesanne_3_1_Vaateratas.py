@@ -13,8 +13,7 @@ küsib kasutajalt, mitu ringi vaateratas teeb ning
 väljastab sama arv kordi ekraanile Näen tervet linna!.
 """
 
-print("Sisesta, mitu ringi teeb vaateratas: ")
-ringideArv = int(input())
+ringideArv = int(input("Sisesta, mitu ringi teeb vaateratas: "))
 while ringideArv > 0:
     print("Näen tervet linna!")
     ringideArv -= 1
