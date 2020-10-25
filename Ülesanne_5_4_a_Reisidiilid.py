@@ -31,4 +31,4 @@ valik = int(input("Mitmes sihtkoht broneerida? [ number vahemikus 1..." + str(le
 if valik > len(sihtkohad) or valik < 1:
     print("Sisestatud valik on väljaspool etteantud piire. Head aega!")
 else:
-    print("Reis on broneeritud. Sihtkoht "+ str(sihtkohad[valik - 1]))
+    print("Reis on broneeritud. Sihtkoht " + str(sihtkohad[valik - 1]))

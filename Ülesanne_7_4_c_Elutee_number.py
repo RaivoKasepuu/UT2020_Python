@@ -50,3 +50,37 @@ ja faili eluteenumber2.txt sisu peab olema
  17.11.1981
 Kõik ülejäänud 7 faili peavad selle näite korral küll tekkima, aga jääma tühjaks.
 """
+
+def elutee(s):
+    #abimuutaja numbri arvutamiseks
+    n = 0
+    # tsükkel, mis vaatab iga sümboli sõnes
+    for i in s:
+        if i != ".":
+            n += int(i) # arvutame summat
+    # kui saadud arv on väiksem kui 10, siis ongi elutee number käes
+    if n < 10:
+        return n
+    # kui saadud arv on 10 või suurem, siis on vaja uuesti arvutada,
+    #selleks kasutame jälle sama funktsiooni
+    else:
+        return elutee(str(n))
+
+for i in range(1,10):
+    fileName = "eluteenumber" + str(i) + ".txt"
+    f = open(fileName, "a")
+
+inputFile = input("Palun sisestage sünnikuupäevade faili nimi: ")
+file = open(inputFile, encoding="UTF-8")
+# if from web:
+# bytes = file.read()
+# text = bytes.decode()
+# print(text)
+
+# if from text:
+for row in file:
+    fileName = "eluteenumber" + str(elutee(row.strip())) + ".txt"
+    file = open(fileName, "a", encoding="UTF-8")
+    file.write(str(row))
+    file.close()
+file.close()

@@ -21,3 +21,14 @@ loeb vastavalt aadressilt selle kuu nimepäevad (kasulik oleks nendest koostada 
 splitlines()) ja
 väljastab ekraanile sisestatud kuupäevale vastavad nimepäevalised.
 """
+from urllib.request import urlopen
+month = input("Sisestage kuu: ")
+day = int(input("Sisestage päev: "))
+FileName = "https://courses.cs.ut.ee/MTAT.TK.012/2015_fall/uploads/Main/" + month
+fileFromWeb = urlopen(FileName)
+bytes = fileFromWeb.read()
+text = bytes.decode()  # baitidest saab sõne
+byRow = text.splitlines()  # sõne jaotatakse reavahetuse kohtadelt
+fileFromWeb.close()
+print("Kuupäeval " + str(day) + ". " + str(month) + " on nimepäevad järgmistel inimestel: ")
+print(str(byRow[day - 1]))

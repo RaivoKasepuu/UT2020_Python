@@ -39,5 +39,32 @@ arvutab ja väljastab ekraanile maksimaalse eelarve, kasutades koostatud funktsi
 arvutab ja väljastab ekraanile minimaalse eelarve, kasutades koostatud funktsiooni eelarve.
 Näide programmi tööst:
 
+
+
 Näiteks, kui faili nimekiri.txt sisu on ülaltoodu, siis programm peab andma tulemuse :
 """
+def eelarve(visitors):
+    return visitors * 10 + 55
+
+
+inputFile = input("Palun sisestage külaliste faili nimi: ")
+file = open(inputFile, encoding="UTF-8")
+# if from web:
+# bytes = file.read()
+# text = bytes.decode()
+# print(text)
+
+confirmedVisitors = 0
+totalNumberOfVisitors = 0
+
+# if from text:
+for row in file:
+    if row[0] == "+":
+       confirmedVisitors += 1
+    totalNumberOfVisitors += 1
+file.close()
+
+print("Maksimaalne eelarve: " + str(eelarve(totalNumberOfVisitors)))
+print("Minimaalne eelarve: " + str(eelarve(confirmedVisitors)))
+
+
