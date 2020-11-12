@@ -70,14 +70,9 @@ for i in range(1,10):
     fileName = "eluteenumber" + str(i) + ".txt"
     f = open(fileName, "a")
 
-inputFile = input("Palun sisestage sünnikuupäevade faili nimi: ")
-file = open(inputFile, encoding="UTF-8")
-# if from web:
-# bytes = file.read()
-# text = bytes.decode()
-# print(text)
+# inputFile = input("Palun sisestage sünnikuupäevade faili nimi: ") TEST EI TAHA FAILI SISESTAMIST NÄHAGI!
+file = open("sunnikuupaevad.txt", encoding="UTF-8")
 
-# if from text:
 for row in file:
     fileName = "eluteenumber" + str(elutee(row.strip())) + ".txt"
     file = open(fileName, "a", encoding="UTF-8")
